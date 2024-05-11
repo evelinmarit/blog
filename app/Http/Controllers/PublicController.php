@@ -8,7 +8,8 @@ class PublicController extends Controller
 {
     public function index(){
         $name = 'Evelin';
-        return view('welcome', ['name' => '$name']);
+        $posts = Post::all();
+        return view('welcome', compact('name'));
     }
     public function page1(){
         return view('page1');
